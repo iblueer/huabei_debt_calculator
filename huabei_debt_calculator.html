@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=unicode" />
+    <title>花呗还款计算器</title>
+    <script type="text/javascript">
+        function getResult() {
+            var total = document.getElementById("total").value;//总额度
+            var usable = document.getElementById("usable").value;//当前可用额度
+            var debtold = document.getElementById("debtold").value;//原有债务
+            var payment = document.getElementById("payment").value;//支付金额
+            var decrease = "";//本金
+            var interest = "";//利息
+            decrease = parseInt(debtold) + parseInt(usable) - parseInt(total);
+            interest = parseInt(payment) - parseInt(decrease);
+            document.getElementById("decrease").value = decrease
+            document.getElementById("interest").value = interest
+        }
+    </script>
+</head>
+
+<body>
+    <div style="width:300px;height:270px;margin:auto;border:2px solid #999999;">
+        <table width="300" border="0">
+            <tr>
+                <td>花呗还款计算器</td>
+            </tr>
+            <tr>
+                <td>
+                    <hr>
+                </td>
+                <td>
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <td>原有债务</td>
+                <td>
+                    <input id="debtold" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td>总额度</td>
+                <td>
+                    <input id="total" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td>支付金额</td>
+                <td>
+                    <input id="payment" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td>当前可用额度</td>
+                <td>
+                    <input id="usable" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <hr>
+                </td>
+                <td>
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" onclick="getResult();" value="计算" style="width: 50px;" />
+                </td>
+            </tr>
+            <tr>
+                <td>本金</td>
+                <td>
+                    <output id="decrease" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td>利息</td>
+                <td>
+                    <output id="interest" type="text" />
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
