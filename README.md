@@ -3,5 +3,5 @@
 
 详细介绍文本：[花呗还款计算器](https://www.maemo.cc/index.php/2017/12/09/huabei-debt-calculator.html)
 
-可以点击下面的链接直接使用：[花呗还款计算器](http://maemo.cc/huabei.html)
+可以点击下面的链接直接使用：[花呗还款计算器](http://maemo.cc/Huabei)
 
